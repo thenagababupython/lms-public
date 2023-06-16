@@ -23,7 +23,7 @@ pipeline {
                     def packageJSONVersion = packageJSON.version
                     echo "${packageJSONVersion}"  
                     sh "zip webapp/dist-${packageJSONVersion}.zip -r webapp/dist"
-                    sh "curl -v -u admin:Admin123* --upload-file webapp/dist-${packageJSONVersion}.zip http://13.52.135.147:8081/repository/lms/"     
+                    sh "curl -v -u admin:lms --upload-file webapp/dist-${packageJSONVersion}.zip http://13.52.135.147:8081/repository/lms/"     
             }
             }
         }
