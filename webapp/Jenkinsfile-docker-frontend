@@ -36,7 +36,7 @@ pipeline {
          stage('Running the docker container') {
             steps {
                   sh 'docker container rm --force fe'
-                  sh 'docker run -dt -p 3000:80 --name fe mubeen507/frontend-lms'
+                  sh 'docker run -dt -p 80:80 --name fe mubeen507/frontend-lms'
             }
         }
     }
