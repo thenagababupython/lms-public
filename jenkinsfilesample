@@ -17,5 +17,9 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('nagababau') {
+            steps {
+                echo 'Nagababu....'
+            }
     }
 }
